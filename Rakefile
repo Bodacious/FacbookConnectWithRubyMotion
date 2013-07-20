@@ -20,5 +20,5 @@ Motion::Project::App.setup do |app|
   raise "Please add your app ID in the two lines below" # <= remove this once you've added your app ID
   # Required for Facebook SDK
   app.info_plist['FacebookAppID'] = '<your app ID here>'
-  app.info_plist['URL types'] = { 'URL Schemes' => 'fb<your app ID here>'}
+  app.info_plist['CFBundleURLTypes'] = [ { 'CFBundleURLSchemes' => [ 'fb<your app ID here>' ] } ]
 end
